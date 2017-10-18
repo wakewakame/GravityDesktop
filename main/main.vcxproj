@@ -81,7 +81,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -97,23 +97,26 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <FloatingPointModel>Fast</FloatingPointModel>
+      <AdditionalIncludeDirectories>.\..\DirectXTK\Inc;.\..\Box2D\Box2D;.\..\LocalHook\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>d3d11.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>LocalHook.lib;Box2D.lib;winmm.lib;d3d11.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>.\..\DirectXTK\Bin\Desktop_2017\x64\Release;.\..\Box2D\Box2D\Build\vs2017\bin\Release;.\..\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <Version>1.0</Version>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -133,36 +136,61 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <FloatingPointModel>Fast</FloatingPointModel>
+      <AdditionalIncludeDirectories>.\..\DirectXTK\Inc;.\..\Box2D\Box2D;.\..\LocalHook\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>d3d11.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>LocalHook.lib;Box2D.lib;winmm.lib;d3d11.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>.\..\DirectXTK\Bin\Desktop_2017\x64\Release;.\..\Box2D\Box2D\Build\vs2017\bin\Release;.\..\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <Version>1.0</Version>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="StepTimer.h" />
+    <ClInclude Include="src\lib\Animation\Animation.h" />
+    <ClInclude Include="src\lib\Box2D\obj.h" />
+    <ClInclude Include="src\lib\Box2D\world.h" />
+    <ClInclude Include="src\lib\capture\all_inc.h" />
+    <ClInclude Include="src\lib\capture\capture.h" />
+    <ClInclude Include="src\lib\capture\hwnd_manager.h" />
+    <ClInclude Include="src\lib\common\box.h" />
+    <ClInclude Include="src\lib\common\general.h" />
+    <ClInclude Include="src\lib\dxtk\Game.h" />
+    <ClInclude Include="src\lib\dxtk\pch.h" />
+    <ClInclude Include="src\lib\dxtk\StepTimer.h" />
+    <ClInclude Include="src\lib\icon\icon.h" />
+    <ClInclude Include="src\lib\icon\Icons.h" />
+    <ClInclude Include="src\lib\imageIcon\imageIcon.h" />
+    <ClInclude Include="src\lib\imageIcon\imageIcons.h" />
+    <ClInclude Include="src\lib\Win32\all_inc.h" />
+    <ClInclude Include="src\lib\Win32\Debug.h" />
+    <ClInclude Include="src\lib\Win32\Keyboard.h" />
+    <ClInclude Include="src\lib\Win32\Messages.h" />
+    <ClInclude Include="src\lib\Win32\Mouse.h" />
+    <ClInclude Include="src\memo.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="pch.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
+    <ClCompile Include="src\lib\Box2D\obj.cpp" />
+    <ClCompile Include="src\lib\Box2D\world.cpp" />
+    <ClCompile Include="src\lib\capture\hwnd_manager.cpp" />
+    <ClCompile Include="src\lib\common\box.cpp" />
+    <ClCompile Include="src\lib\common\general.cpp" />
+    <ClCompile Include="src\lib\dxtk\Game.cpp" />
+    <ClCompile Include="src\lib\dxtk\pch.cpp" />
+    <ClCompile Include="src\lib\Win32\Debug.cpp" />
+    <ClCompile Include="src\lib\Win32\Keyboard.cpp" />
+    <ClCompile Include="src\lib\Win32\Messages.cpp" />
+    <ClCompile Include="src\lib\Win32\Mouse.cpp" />
+    <ClCompile Include="src\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc" />

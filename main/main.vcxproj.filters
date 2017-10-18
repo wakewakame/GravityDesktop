@@ -7,14 +7,41 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="StepTimer.h" />
+    <ClInclude Include="src\lib\Animation\Animation.h" />
+    <ClInclude Include="src\lib\Box2D\obj.h" />
+    <ClInclude Include="src\lib\Box2D\world.h" />
+    <ClInclude Include="src\lib\capture\all_inc.h" />
+    <ClInclude Include="src\lib\capture\capture.h" />
+    <ClInclude Include="src\lib\capture\hwnd_manager.h" />
+    <ClInclude Include="src\lib\common\box.h" />
+    <ClInclude Include="src\lib\common\general.h" />
+    <ClInclude Include="src\lib\dxtk\Game.h" />
+    <ClInclude Include="src\lib\dxtk\pch.h" />
+    <ClInclude Include="src\lib\dxtk\StepTimer.h" />
+    <ClInclude Include="src\lib\icon\icon.h" />
+    <ClInclude Include="src\lib\icon\Icons.h" />
+    <ClInclude Include="src\lib\imageIcon\imageIcon.h" />
+    <ClInclude Include="src\lib\imageIcon\imageIcons.h" />
+    <ClInclude Include="src\lib\Win32\all_inc.h" />
+    <ClInclude Include="src\lib\Win32\Debug.h" />
+    <ClInclude Include="src\lib\Win32\Keyboard.h" />
+    <ClInclude Include="src\lib\Win32\Messages.h" />
+    <ClInclude Include="src\lib\Win32\Mouse.h" />
+    <ClInclude Include="src\memo.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pch.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="src\lib\Box2D\obj.cpp" />
+    <ClCompile Include="src\lib\Box2D\world.cpp" />
+    <ClCompile Include="src\lib\capture\hwnd_manager.cpp" />
+    <ClCompile Include="src\lib\common\box.cpp" />
+    <ClCompile Include="src\lib\common\general.cpp" />
+    <ClCompile Include="src\lib\dxtk\Game.cpp" />
+    <ClCompile Include="src\lib\dxtk\pch.cpp" />
+    <ClCompile Include="src\lib\Win32\Debug.cpp" />
+    <ClCompile Include="src\lib\Win32\Keyboard.cpp" />
+    <ClCompile Include="src\lib\Win32\Messages.cpp" />
+    <ClCompile Include="src\lib\Win32\Mouse.cpp" />
+    <ClCompile Include="src\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc" />
