@@ -109,7 +109,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>LocalHook.lib;Box2D.lib;winmm.lib;d3d11.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>.\..\DirectXTK\Bin\Desktop_2017\x64\Release;.\..\Box2D\Box2D\Build\vs2017\bin\Release;.\..\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>.\..\DirectXTK\Bin\Desktop_2017\x64\Debug;.\..\Box2D\Box2D\Build\vs2017\bin\Debug;.\..\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <Version>1.0</Version>
     </Link>
   </ItemDefinitionGroup>

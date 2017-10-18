@@ -2,6 +2,7 @@
 
 ### 使用方法
 GravityDesktop.slnを開く  
+Release x64に変更  
 Box2D->DirectXTK_Desktop_2017->LocalHook->mainの順にコンパイル  
 Escで終了  
 
