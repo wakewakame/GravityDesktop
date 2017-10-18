@@ -6,7 +6,8 @@ premake5を[https://premake.github.io](https://premake.github.io)からダウンロード
 コマンドプロンプトでGravityDesktop\Box2D\Box2Dで"premake5.exe vs2017"と入力し実行  
 GravityDesktop.slnを開く  
 Release x64に変更  
-Box2D->DirectXTK_Desktop_2017->LocalHook->mainの順にコンパイル  
+mainプロジェクトを右クリックし、"スタートアッププロジェクトに設定"をクリック  
+F5キーで実行  
 Escで終了  
 
 ### 使用ライブラリ 
