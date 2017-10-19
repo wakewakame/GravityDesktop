@@ -1,5 +1,8 @@
 # Gravity Desktop  
 
+### コンパイル済みファイルのダウンロード  
+[Gravity Desktop v1.0](https://github.com/wakewakame/GravityDesktop/releases)  
+
 ### 動作条件
 OS:Windows 10 64bit  
 
