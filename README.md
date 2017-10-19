@@ -18,6 +18,7 @@ Escで終了
 
 ### 未実装機能  
 アイコンが重複していた際、起動時中のみ自動的にアイコン整列  
+エラー発生時の原因表示
 
 ### 使用ライブラリ 
 Box2D:[https://github.com/erincatto/Box2D](https://github.com/erincatto/Box2D)  
