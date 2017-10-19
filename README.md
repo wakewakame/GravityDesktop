@@ -13,6 +13,9 @@ mainプロジェクトを右クリックし、"スタートアッププロジェクトに設定"をクリック
 F5キーで実行  
 Escで終了  
 
+### 未実装機能  
+アイコンが重複していた際、起動時中のみ自動的にアイコン整列  
+
 ### 使用ライブラリ 
 Box2D:[https://github.com/erincatto/Box2D](https://github.com/erincatto/Box2D)  
 DirectX Tool Kit:[https://github.com/Microsoft/DirectXTK](https://github.com/erincatto/Box2D)  
