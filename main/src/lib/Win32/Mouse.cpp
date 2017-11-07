@@ -48,12 +48,15 @@ bool Mouse::loop() {
 		{
 		case WM_LBUTTONDBLCLK:
 			double_click.l = 1;
+			SetCapture(Messages::use_list[i].hWnd);
 			break;
 		case WM_RBUTTONDBLCLK:
 			double_click.r = 1;
+			SetCapture(Messages::use_list[i].hWnd);
 			break;
 		case WM_MBUTTONDBLCLK:
 			double_click.w = 1;
+			SetCapture(Messages::use_list[i].hWnd);
 			break;
 
 		case WM_LBUTTONDOWN:
@@ -61,31 +64,37 @@ bool Mouse::loop() {
 			click_b.l = 1;
 			drag_from.x = (float)((unsigned short int)(LOWORD(Messages::use_list[i].lParam)));
 			drag_from.y = (float)((unsigned short int)(HIWORD(Messages::use_list[i].lParam)));
+			SetCapture(Messages::use_list[i].hWnd);
 			break;
 		case WM_RBUTTONDOWN:
 			click_a.r = 1;
 			click_b.r = 1;
 			drag_from.x = (float)((unsigned short int)(LOWORD(Messages::use_list[i].lParam)));
 			drag_from.y = (float)((unsigned short int)(HIWORD(Messages::use_list[i].lParam)));
+			SetCapture(Messages::use_list[i].hWnd);
 			break;
 		case WM_MBUTTONDOWN:
 			click_a.w = 1;
 			click_b.w = 1;
 			drag_from.x = (float)((unsigned short int)(LOWORD(Messages::use_list[i].lParam)));
 			drag_from.y = (float)((unsigned short int)(HIWORD(Messages::use_list[i].lParam)));
+			SetCapture(Messages::use_list[i].hWnd);
 			break;
 
 		case WM_LBUTTONUP:
 			click_a.l = 0;
 			click_c.l = 1;
+			ReleaseCapture();
 			break;
 		case WM_RBUTTONUP:
 			click_a.r = 0;
+			ReleaseCapture();
 			click_c.r = 1;
 			break;
 		case WM_MBUTTONUP:
 			click_a.w = 0;
 			click_c.w = 1;
+			ReleaseCapture();
 			break;
 
 		case WM_MOUSEMOVE:

@@ -1,5 +1,8 @@
 # Gravity Desktop  
 
+### 動作画面  
+[https://www.youtube.com/embed/ogNGlpY-RSw](https://www.youtube.com/embed/ogNGlpY-RSw)  
+
 ### コンパイル済みファイルのダウンロード  
 [Gravity Desktop v1.0](https://github.com/wakewakame/GravityDesktop/releases)  
 
