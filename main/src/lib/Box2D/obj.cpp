@@ -47,11 +47,11 @@ void gdObj::spring(float x, float y) {
 	move_ivec.y = (y - size.position().y) * rate;
 	move_length = move_ivec.Length();
 	move_ivec *= (1.0f / move_length);
-	move_ivec = 10.0f * move_length * body->GetMass() * move_ivec;
+	move_ivec = 100.0f * move_length * body->GetMass() * move_ivec;
 	// 重力無効化
 	move_ivec -= (body->GetMass() * world->GetGravity());
 	// 速度減衰率変更
-	body->SetLinearDamping(2.0f);
+	body->SetLinearDamping(5.0f);
 	// 力の適応
 	body->ApplyForce(move_ivec, body->GetPosition(), 1);
 }
