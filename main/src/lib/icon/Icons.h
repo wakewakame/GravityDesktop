@@ -47,7 +47,7 @@ public:
 		}
 		// 全アイコン情報取得
 		for (size_t i = 0; i < icon.size(); i++) {
-			icon[i].update();
+			if(icon[i].update()) return 1;
 		}
 		return 0;
 	}

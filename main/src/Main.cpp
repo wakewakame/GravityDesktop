@@ -5,6 +5,9 @@
 #include "lib\dxtk\pch.h"
 #include "lib\dxtk\Game.h"
 
+#include <string>
+#include <sstream>
+
 using namespace DirectX;
 
 namespace
@@ -119,7 +122,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	// TODO: Set s_fullscreen to true if defaulting to fullscreen.
 
 	auto game = reinterpret_cast<Game*>(GetWindowLongPtr(hWnd, GWLP_USERDATA));
-	Debug::cout((long long)message);
 	switch (message)
 	{
 	case WM_PAINT:

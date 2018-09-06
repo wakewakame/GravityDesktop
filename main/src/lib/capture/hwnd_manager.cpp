@@ -99,9 +99,11 @@ void gdHwndManager::cover(HWND hwnd) {
 
 	// 親ウィンドウの設定
 	SetParent(hwnd, wallPaper); // 親ウィンドウを壁紙に設定
+
 	RECT rc;
 	GetWindowRect(wallPaper, &rc);
-	SetWindowPos(hwnd, HWND_BOTTOM, 0, 0, rc.right - rc.left, rc.bottom - rc.top, SWP_NOREDRAW); // ウィンドウ座標を相対座標に変更
+	SetWindowPos(hwnd, HWND_BOTTOM, 0, 0, rc.right - rc.left, rc.bottom - rc.top, 0); // ウィンドウ座標を相対座標に変更
+
 	// デスクトップの祖先ウィンドウを透明度を0%にする
 	// (デスクトップの透明度は100%のままにする)
 	{

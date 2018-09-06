@@ -79,6 +79,7 @@ void Game::Render()
     Clear();
 
     // TODO: Add your rendering code here.
+
 	Messages::get();
 	wallPaper.renderBackup(1);
 	anime.render();
@@ -106,7 +107,9 @@ void Game::Present()
     // The first argument instructs DXGI to block until VSync, putting the application
     // to sleep until the next VSync. This ensures we don't waste any cycles rendering
     // frames that will never be displayed to the screen.
-    HRESULT hr = m_swapChain->Present(1, 0);
+
+	HRESULT hr = m_swapChain->Present(1, 0);
+
     // If the device was reset we must completely reinitialize the renderer.
     if (hr == DXGI_ERROR_DEVICE_REMOVED || hr == DXGI_ERROR_DEVICE_RESET)
     {

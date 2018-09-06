@@ -492,22 +492,22 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>Bin\Desktop_2017\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>Bin\Desktop_2017\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName>DirectXTK</TargetName>
+    <IntDir>Obj\Desktop_2017\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>DirectXTK_d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>Bin\Desktop_2017\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>Bin\Desktop_2017\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir>Obj\Desktop_2017\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>DirectXTK</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>Bin\Desktop_2017\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>Bin\Desktop_2017\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName>DirectXTK</TargetName>
+    <IntDir>Obj\Desktop_2017\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>DirectXTK_d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>Bin\Desktop_2017\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>Bin\Desktop_2017\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir>Obj\Desktop_2017\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>DirectXTK</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

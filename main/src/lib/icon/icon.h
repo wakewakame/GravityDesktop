@@ -26,6 +26,8 @@ public:
 		index = set_index;
 	}
 	bool update() {
+		DWORD t1 = timeGetTime(); //---------------------------------------------
+
 		// アイテムのアイコン範囲座標取得
 		rc.left = LVIR_ICON; // アイコン部分とテキスト部分の両方の範囲取得
 		if (WriteProcessMemory(pid_h, ptr, &rc, sizeof(RECT), &numRead) == 0) return 1; // ptrにRECT代入
@@ -44,6 +46,10 @@ public:
 		focus_var = ((ret&LVIS_FOCUSED) == LVIS_FOCUSED);
 		// ホットアイテム情報取得
 		hot_var = (index == SendMessage(hwnd, LVM_GETHOTITEM, 0, 0));
+
+		DWORD t2 = timeGetTime(); //---------------------------------------------
+		//if (t2 - t1 > 4) Debug::cout(std::to_wstring(t2 - t1).c_str());
+
 		// 処理終了
 		return 0;
 	}

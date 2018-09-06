@@ -68,8 +68,6 @@ private:
 				Mouse::getCursor().x - (world.getBox().size().x / 2.0f),
 				Mouse::getCursor().y - (world.getBox().size().y / 2.0f)
 			);
-			Debug::cout(L"test");
-			Debug::cout(vec.x);
 			vec /= WorldRect.size().y / 2.0f;
 			vec *= (vec.Length() > 1.0f) ? (1.0f / vec.Length()) : 1.0f;
 			vec *= (world.getDefaultGravity().Length() / world.getRate());
