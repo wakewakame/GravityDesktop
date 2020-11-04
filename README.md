@@ -1,7 +1,9 @@
-# Gravity Desktop  
+![demo](demo.gif)
 
-### 動作画面  
-[https://www.youtube.com/watch?v=ogNGlpY-RSw](https://www.youtube.com/watch?v=ogNGlpY-RSw)  
+# Gravity Desktop  
+**※このプログラムには新しいバージョン [GravityDesktop2](https://github.com/wakewakame/GravityDesktop2) があります。**
+
+大学1年のときに作成した、デスクトップにあるアイコンが落下運動をするジョークソフトです。
 
 ### コンパイル済みファイルのダウンロード  
 [Gravity Desktop v1.0](https://github.com/wakewakame/GravityDesktop/releases)  
@@ -18,14 +20,6 @@ GravityDesktop.slnを開く
 mainプロジェクトを右クリックし、"スタートアッププロジェクトに設定"をクリック  
 F5キーで実行  
 Escで終了  
-
-### 未実装機能  
-アイコンが重複していた際、起動時中のみ自動的にアイコン整列  
-エラー発生時の原因表示  
-
-## 改善点  
-フレームレートを1フレームの経過時間で取得するのではなく100フレーム程度の経過時間から算出する  
-(フレームが急に変化したときにBox2Dの挙動が少しおかしくなる為)  
 
 ### 使用ライブラリ  
 Box2D:[https://github.com/erincatto/Box2D](https://github.com/erincatto/Box2D)  
